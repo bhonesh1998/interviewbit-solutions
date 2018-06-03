@@ -1,0 +1,25 @@
+int Solution::isPalindrome(string A) {
+    int i;
+    string st;
+    for(i=0;i<A.length();i++)
+{
+  if(A[i]>='a'&&A[i]<='z')
+    st.push_back(A[i]);
+  else if (A[i]>='A' && A[i]<='Z')
+      st.push_back(A[i]+32);
+	else if (A[i]>='0' && A[i]<='9') st.push_back(A[i]);
+ 
+}
+int c=0;
+int s1 = st.length()/2;
+for(i=0;i<s1;i++) {
+ 
+  if(st[i]==st[st.length()-i-1])
+    c++;
+  else
+     return 0;
+  /* code */
+}
+if(c==s1) 
+return 1;
+}
