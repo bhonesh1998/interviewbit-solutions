@@ -1,0 +1,19 @@
+or<int> Solution::sieve(int A) {
+    vector<int> v;
+    bool pr[A+1];
+    int p,j;
+    memset(pr,true,sizeof(pr));
+    for(p=2;p*p<=A;p++)
+    {
+        if(pr[p]==true)
+        {
+                for(j=2*p;j<=A;j+=p)
+                    pr[j]=false;
+        }
+    }
+ 
+    for(j=2;j<=A;j++)
+        if(pr[j]==true) v.push_back(j);
+        
+        return v;
+}
