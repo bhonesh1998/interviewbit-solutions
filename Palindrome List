@@ -1,0 +1,51 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+ 
+ int si(ListNode *A)
+ {
+        int l =0;
+        while(A!=NULL)
+        {
+            l++;
+            A=A->next;
+        }
+        return l;
+ }
+ 
+int Solution::lPalin(ListNode* A) {
+    int i=0,count=0;
+    int f=0;
+    stack <int> s;
+    int q=si(A)/2;
+    int n = si(A);
+    //cout << q << endl;
+    if(n%2==1) f = 1;
+    for(i=1;i<=q;i++)
+    {
+        s.push(A->val);
+         A=A->next;
+    }
+    
+    if(f==1 ) {A=A->next;q++;}
+     for(i=q;i<n;i++)
+    {
+        int t=s.top();
+        s.pop();
+        if(t==(A->val))
+        count++;
+        A=A->next;
+    }
+    //cout << count ;
+   
+    if(count==(n-q) )
+    return 1;
+    else return 0;
+   
+    
+}
