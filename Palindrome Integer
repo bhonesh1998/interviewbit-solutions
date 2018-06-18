@@ -1,0 +1,13 @@
+int Solution::isPalindrome(int A) {
+    int n,i,c=0;
+    n=A;
+   //sf("%d",&n);
+   string s = to_string(n);
+   int m = s.length()/2;
+   for(i=0;i<m;i++)
+   {
+          if(s[i]==s[s.length()-i-1])
+            c++;
+   }
+   if(c==m) return true; else return false;
+}
