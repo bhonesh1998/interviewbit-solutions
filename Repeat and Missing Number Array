@@ -1,0 +1,21 @@
+typedef long long int z ;
+vector<int> Solution::repeatedNumber(const vector<int> &A) {
+     z n=A.size();
+    z sum=0;
+    z sumsq=0;
+    for(z i=0;i<n;i++)
+    {
+        sum+=(z)A[i];
+        sumsq+=((z)A[i]*(z)A[i]);
+    }
+    z diff = (n*(n+1)/2)-sum;
+    z diff2 = ((n*(n+1)*(2*n+1))/6)-sumsq;
+    z sumi = diff2/diff;
+    int r= (sumi-diff)/2;
+ int m = (diff+sumi)/2;
+    vector<int> ans;
+    ans.push_back(r);
+    ans.push_back(m);
+    return ans;
+
+}
