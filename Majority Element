@@ -1,0 +1,17 @@
+#define z long long int
+int Solution::majorityElement(const vector<int> &A) {
+    
+    map <z,z> m;
+    for(int i=0;i<A.size();i++)
+    {   
+        //    sf("%d",&a[i]);
+            m[A[i]]++;
+    }
+
+    map <z,z> :: iterator it;
+    for(it=m.begin();it!=m.end();it++)
+    {
+            if(it->second > floor(A.size()/2))
+                return it->first;
+    }
+}
