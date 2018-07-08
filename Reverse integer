@@ -1,0 +1,39 @@
+typedef long long int z ;
+int Solution::reverse(int A) {
+    z n=A;
+    //sf("%lld",&n);
+
+    if(n>=0)
+    {
+
+    z p=0;
+    while(n>0)
+    {
+        
+        p=(p*10+n%10);
+        n=n/10;
+    }    
+//cout << p;
+ if( p < -pow(2,31) || p > (pow(2,31)-1) )
+                return 0;
+            else
+                return (int)p;
+    }
+    else if(n<0)
+    {
+            n=abs(n);
+            z p=0;
+    while(n>0)
+    {
+        
+        p=(p*10+n%10);
+        n=n/10;
+    }       
+            if( p < (1-pow(2,31)) || p > pow(2,31) )
+                return 0;
+            else
+                return (int)-p;
+
+
+    }
+}
