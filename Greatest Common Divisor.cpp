@@ -10,3 +10,4 @@ int Solution::gcd(int A, int B) {
     
     
 }
+// worst case : O(logmin(m,n))
