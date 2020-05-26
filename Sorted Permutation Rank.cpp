@@ -1,4 +1,4 @@
-
+// The following solution is not giving the correct answer as it is missing corner cases!!
 /*
 Sorted Permutation Rank
 Given a string, find the rank of the string amongst its permutations sorted lexicographically. 
