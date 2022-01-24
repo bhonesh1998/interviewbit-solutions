@@ -21,7 +21,7 @@ Constraints:
 */
 
 
-nt Solution::findMinXor(vector<int> &A) {
+int Solution::findMinXor(vector<int> &A) {
     sort(A.begin(),A.end());
     int minXor = INT_MAX;
     int val = 0;
